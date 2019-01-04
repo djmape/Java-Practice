@@ -1,4 +1,10 @@
 class InheritThis {
+
+	String aString = "Superclass ";
+
+	InheritThis() {
+	}
+
 	public void justPrint() {
 		System.out.println("Just print this");
 	}
@@ -6,8 +12,14 @@ class InheritThis {
 
 public class InheritancePractice extends InheritThis {
 	
+	String aString = "Subclass ";
+
+	public void displayThis() {
+		System.out.println( super.aString + "accessed!");
+	}
+
 	public static void main(String args[]) {
-		InheritThis inseo = new InheritThis();
-		inseo.justPrint();
+		InheritancePractice inh = new InheritancePractice();
+		inh.displayThis();
 	}
 }
